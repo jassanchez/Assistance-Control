@@ -30,3 +30,32 @@ e:\users\alexis sanchez\documentos\visual studio 2012\Projects\Controlador de As
 D:\Users\Alexis Sanchez\Documentos\Visual Studio 2012\Projects\Controlador de Asistencia\Controlador de Asistencia\bin\Debug\Controlador de Asistencia.exe.config
 D:\Users\Alexis Sanchez\Documentos\Visual Studio 2012\Projects\Controlador de Asistencia\Controlador de Asistencia\obj\Debug\Controlador de Asistencia.exe
 D:\Users\Alexis Sanchez\Documentos\Visual Studio 2012\Projects\Controlador de Asistencia\Controlador de Asistencia\obj\Debug\Controlador de Asistencia.pdb
+D:\Users\Alexis Sanchez\Documentos\Visual Studio 2012\Projects\Controlador-de-Asistencia\Controlador de Asistencia\bin\Debug\Controlador de Asistencia.exe.config
+D:\Users\Alexis Sanchez\Documentos\Visual Studio 2012\Projects\Controlador-de-Asistencia\Controlador de Asistencia\obj\Debug\Controlador de Asistencia.exe
+D:\Users\Alexis Sanchez\Documentos\Visual Studio 2012\Projects\Controlador-de-Asistencia\Controlador de Asistencia\obj\Debug\Controlador de Asistencia.pdb
+D:\Users\Alexis Sanchez\Documentos\Visual Studio 2012\Projects\Controlador-de-Asistencia\Controlador de Asistencia\obj\Debug\Controlador de Asistencia.csprojResolveAssemblyReference.cache
+D:\Users\Alexis Sanchez\Documentos\Visual Studio 2012\Projects\Controlador-de-Asistencia\Controlador de Asistencia\obj\Debug\Controlador_de_Asistencia.Formularios.Control_Administrativo.Acerca_De.Acerca_De.resources
+D:\Users\Alexis Sanchez\Documentos\Visual Studio 2012\Projects\Controlador-de-Asistencia\Controlador de Asistencia\obj\Debug\Controlador_de_Asistencia.Formularios.Control_Administrativo.Asistencia.AsistenciaPorDia.resources
+D:\Users\Alexis Sanchez\Documentos\Visual Studio 2012\Projects\Controlador-de-Asistencia\Controlador de Asistencia\obj\Debug\Controlador_de_Asistencia.Formularios.Control_Administrativo.Configuración.Settings.resources
+D:\Users\Alexis Sanchez\Documentos\Visual Studio 2012\Projects\Controlador-de-Asistencia\Controlador de Asistencia\obj\Debug\Controlador_de_Asistencia.Formularios.Control_Administrativo.Departamentos.ConsultaDeDepartamentos.resources
+D:\Users\Alexis Sanchez\Documentos\Visual Studio 2012\Projects\Controlador-de-Asistencia\Controlador de Asistencia\obj\Debug\Controlador_de_Asistencia.Formularios.Control_Administrativo.Departamentos.RegistroDepartamento.resources
+D:\Users\Alexis Sanchez\Documentos\Visual Studio 2012\Projects\Controlador-de-Asistencia\Controlador de Asistencia\obj\Debug\Controlador_de_Asistencia.Formularios.Control_Administrativo.MenuAdministrativo.resources
+D:\Users\Alexis Sanchez\Documentos\Visual Studio 2012\Projects\Controlador-de-Asistencia\Controlador de Asistencia\obj\Debug\Controlador_de_Asistencia.Formularios.Control_Administrativo.Personal.ActualizaPersonal.resources
+D:\Users\Alexis Sanchez\Documentos\Visual Studio 2012\Projects\Controlador-de-Asistencia\Controlador de Asistencia\obj\Debug\Controlador_de_Asistencia.Formularios.Control_Administrativo.Personal.ConsultaPersonal.resources
+D:\Users\Alexis Sanchez\Documentos\Visual Studio 2012\Projects\Controlador-de-Asistencia\Controlador de Asistencia\obj\Debug\Controlador_de_Asistencia.Formularios.Control_Administrativo.Personal.RegistroPersonal.resources
+D:\Users\Alexis Sanchez\Documentos\Visual Studio 2012\Projects\Controlador-de-Asistencia\Controlador de Asistencia\obj\Debug\Controlador_de_Asistencia.Formularios.Control_Administrativo.Reportes.ReporteUnDia.resources
+D:\Users\Alexis Sanchez\Documentos\Visual Studio 2012\Projects\Controlador-de-Asistencia\Controlador de Asistencia\obj\Debug\Controlador_de_Asistencia.Formularios.Toma_de_Asistencia.Checador.resources
+D:\Users\Alexis Sanchez\Documentos\Visual Studio 2012\Projects\Controlador-de-Asistencia\Controlador de Asistencia\obj\Debug\Controlador_de_Asistencia.Splash.resources
+D:\Users\Alexis Sanchez\Documentos\Visual Studio 2012\Projects\Controlador-de-Asistencia\Controlador de Asistencia\obj\Debug\Controlador_de_Asistencia.Properties.Resources.resources
+D:\Users\Alexis Sanchez\Documentos\Visual Studio 2012\Projects\Controlador-de-Asistencia\Controlador de Asistencia\obj\Debug\Controlador de Asistencia.csproj.GenerateResource.Cache
+D:\Users\Alexis Sanchez\Documentos\Visual Studio 2012\Projects\Controlador-de-Asistencia\Controlador de Asistencia\bin\Debug\Base de Datos\SoftwareDatabase.sdf
+D:\Users\Alexis Sanchez\Documentos\Visual Studio 2012\Projects\Controlador-de-Asistencia\Controlador de Asistencia\bin\Debug\Controlador de Asistencia.exe.manifest
+D:\Users\Alexis Sanchez\Documentos\Visual Studio 2012\Projects\Controlador-de-Asistencia\Controlador de Asistencia\bin\Debug\Controlador de Asistencia.application
+D:\Users\Alexis Sanchez\Documentos\Visual Studio 2012\Projects\Controlador-de-Asistencia\Controlador de Asistencia\bin\Debug\Controlador de Asistencia.exe
+D:\Users\Alexis Sanchez\Documentos\Visual Studio 2012\Projects\Controlador-de-Asistencia\Controlador de Asistencia\bin\Debug\Controlador de Asistencia.pdb
+D:\Users\Alexis Sanchez\Documentos\Visual Studio 2012\Projects\Controlador-de-Asistencia\Controlador de Asistencia\bin\Debug\DocumentFormat.OpenXml.dll
+D:\Users\Alexis Sanchez\Documentos\Visual Studio 2012\Projects\Controlador-de-Asistencia\Controlador de Asistencia\bin\Debug\SpreadsheetLight.dll
+D:\Users\Alexis Sanchez\Documentos\Visual Studio 2012\Projects\Controlador-de-Asistencia\Controlador de Asistencia\bin\Debug\SpreadsheetLight.xml
+D:\Users\Alexis Sanchez\Documentos\Visual Studio 2012\Projects\Controlador-de-Asistencia\Controlador de Asistencia\obj\Debug\Controlador de Asistencia.TrustInfo.xml
+D:\Users\Alexis Sanchez\Documentos\Visual Studio 2012\Projects\Controlador-de-Asistencia\Controlador de Asistencia\obj\Debug\Controlador de Asistencia.exe.manifest
+D:\Users\Alexis Sanchez\Documentos\Visual Studio 2012\Projects\Controlador-de-Asistencia\Controlador de Asistencia\obj\Debug\Controlador de Asistencia.application
