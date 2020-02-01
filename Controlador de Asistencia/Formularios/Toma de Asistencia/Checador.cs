@@ -76,13 +76,15 @@ namespace Controlador_de_Asistencia.Formularios.Toma_de_Asistencia
             DPFP.FeatureSet caracteristicas = lectorBiometrico.getFeatures(s, DPFP.Processing.DataPurpose.Verification);
             foreach(DataRow row in personal.Rows) {
                 int idPersonal = Convert.ToInt32(row["idPersonal"]);
-                MemoryStream memoria = new MemoryStream((byte[])row["Biometria"]);
-                plantilla.DeSerialize(memoria.ToArray());
-                memoria.Dispose(); memoria.Close(); memoria = null;
-                if(lectorBiometrico.verificar(caracteristicas,plantilla)){
-                    new EntradaSalidaTableAdapter().InsertQuery(DateTime.Now, inputOrOutput(idPersonal), idPersonal);
-                    return true;
-                }
+                if (row["Biometria"] != DBNull.Value) {
+                    MemoryStream memoria = new MemoryStream((byte[])row["Biometria"]);
+                    plantilla.DeSerialize(memoria.ToArray());
+                    memoria.Dispose(); memoria.Close(); memoria = null;
+                    if (lectorBiometrico.verificar(caracteristicas, plantilla)) {
+                        new EntradaSalidaTableAdapter().InsertQuery(DateTime.Now, inputOrOutput(idPersonal), idPersonal);
+                        return true;
+                    }
+                } 
             }
             return false;
         }

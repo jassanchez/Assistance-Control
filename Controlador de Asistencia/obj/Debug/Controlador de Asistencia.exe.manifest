@@ -44,12 +44,37 @@
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
-      <assemblyIdentity name="DevComponents.DotNetBar2" version="10.9.0.1" publicKeyToken="C39C3242A43EEE2B" language="neutral" processorArchitecture="msil" />
+      <assemblyIdentity name="DevComponents.DotNetBar.Keyboard" version="11.3.0.0" publicKeyToken="C39C3242A43EEE2B" language="neutral" processorArchitecture="msil" />
     </dependentAssembly>
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
-      <assemblyIdentity name="DevComponents.Instrumentation" version="10.9.0.1" publicKeyToken="BC4A9D761EA44EF0" language="neutral" processorArchitecture="msil" />
+      <assemblyIdentity name="DevComponents.DotNetBar.Schedule" version="11.3.0.0" publicKeyToken="C39C3242A43EEE2B" language="neutral" processorArchitecture="msil" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="DevComponents.DotNetBar.SuperGrid" version="11.3.0.0" publicKeyToken="C39C3242A43EEE2B" language="neutral" processorArchitecture="msil" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="DevComponents.DotNetBar2" version="11.3.0.0" publicKeyToken="C39C3242A43EEE2B" language="neutral" processorArchitecture="msil" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="DevComponents.Instrumentation" version="11.3.0.0" publicKeyToken="BC4A9D761EA44EF0" language="neutral" processorArchitecture="msil" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="DevComponents.SuperGrid.Design" version="11.3.0.0" publicKeyToken="1FEA3F5D8D482BFF" language="neutral" processorArchitecture="msil" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="DevComponents.TreeGX" version="11.3.0.0" publicKeyToken="CFCBD7476B2389D1" language="neutral" processorArchitecture="msil" />
     </dependentAssembly>
   </dependency>
   <dependency>
@@ -108,14 +133,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Controlador de Asistencia.exe" size="3398144">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Controlador de Asistencia.exe" size="3400704">
       <assemblyIdentity name="Controlador de Asistencia" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>jZtKjX0CLDN6nqOWDRtpszLJphj9pwkEThVFqgCIw1Y=</dsig:DigestValue>
+        <dsig:DigestValue>ZVfdcA9NubDDGKXMZw4xaS4tlT+EKDhqCaWgx9a0ffM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -143,6 +168,18 @@
       </hash>
     </dependentAssembly>
   </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="es\System.Data.SqlServerCe.resources.dll" size="47328">
+      <assemblyIdentity name="System.Data.SqlServerCe.resources" version="4.0.0.0" publicKeyToken="89845DCD8080CC91" language="es" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>ClVTL1hUEQVBbQlktSvQvzDlW7fJ/PJfkjsGFgNDxMg=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
   <file name="alarm-clock_icon-icons.com_60726.ico" size="67646">
     <hash>
       <dsig:Transforms>
@@ -158,16 +195,16 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>HDW+pwAw2T0GMaWWzJ9lboYpfcfmbo0p9JFfyHl2EKA=</dsig:DigestValue>
+      <dsig:DigestValue>wud1g93zcAdgEYTYMB+7WIeCtF3v5AwKN2T9Pks4hnc=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Controlador de Asistencia.exe.config" size="556">
+  <file name="Controlador de Asistencia.exe.config" size="544">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>tK1T1Iv64dBDbPQOu4MA/07xkA89EHjaD4I8bWMWYOQ=</dsig:DigestValue>
+      <dsig:DigestValue>i63sRZVDl6Gq2iNNwkbngB4FHdW7E+9LooA+cL/MDRA=</dsig:DigestValue>
     </hash>
   </file>
   <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">

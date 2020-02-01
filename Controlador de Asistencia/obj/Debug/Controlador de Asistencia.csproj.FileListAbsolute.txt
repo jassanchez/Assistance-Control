@@ -59,3 +59,29 @@ D:\Users\Alexis Sanchez\Documentos\Visual Studio 2012\Projects\Controlador-de-As
 D:\Users\Alexis Sanchez\Documentos\Visual Studio 2012\Projects\Controlador-de-Asistencia\Controlador de Asistencia\obj\Debug\Controlador de Asistencia.TrustInfo.xml
 D:\Users\Alexis Sanchez\Documentos\Visual Studio 2012\Projects\Controlador-de-Asistencia\Controlador de Asistencia\obj\Debug\Controlador de Asistencia.exe.manifest
 D:\Users\Alexis Sanchez\Documentos\Visual Studio 2012\Projects\Controlador-de-Asistencia\Controlador de Asistencia\obj\Debug\Controlador de Asistencia.application
+C:\Users\INTRM29112017-i3\Downloads\Controlador-de-Asistencia-master\Controlador-de-Asistencia-master\Controlador de Asistencia\bin\Debug\Controlador de Asistencia.exe.config
+C:\Users\INTRM29112017-i3\Downloads\Controlador-de-Asistencia-master\Controlador-de-Asistencia-master\Controlador de Asistencia\obj\Debug\Controlador de Asistencia.exe
+C:\Users\INTRM29112017-i3\Downloads\Controlador-de-Asistencia-master\Controlador-de-Asistencia-master\Controlador de Asistencia\obj\Debug\Controlador de Asistencia.pdb
+C:\Users\INTRM29112017-i3\Downloads\Controlador-de-Asistencia-master\Controlador-de-Asistencia-master\Controlador de Asistencia\obj\Debug\Controlador de Asistencia.csprojResolveAssemblyReference.cache
+C:\Users\INTRM29112017-i3\Downloads\Controlador-de-Asistencia-master\Controlador-de-Asistencia-master\Controlador de Asistencia\obj\Debug\Controlador_de_Asistencia.Formularios.Control_Administrativo.Acerca_De.Acerca_De.resources
+C:\Users\INTRM29112017-i3\Downloads\Controlador-de-Asistencia-master\Controlador-de-Asistencia-master\Controlador de Asistencia\obj\Debug\Controlador_de_Asistencia.Formularios.Control_Administrativo.Asistencia.AsistenciaPorDia.resources
+C:\Users\INTRM29112017-i3\Downloads\Controlador-de-Asistencia-master\Controlador-de-Asistencia-master\Controlador de Asistencia\obj\Debug\Controlador_de_Asistencia.Formularios.Control_Administrativo.Configuración.Settings.resources
+C:\Users\INTRM29112017-i3\Downloads\Controlador-de-Asistencia-master\Controlador-de-Asistencia-master\Controlador de Asistencia\obj\Debug\Controlador_de_Asistencia.Formularios.Control_Administrativo.Departamentos.ConsultaDeDepartamentos.resources
+C:\Users\INTRM29112017-i3\Downloads\Controlador-de-Asistencia-master\Controlador-de-Asistencia-master\Controlador de Asistencia\obj\Debug\Controlador_de_Asistencia.Formularios.Control_Administrativo.Departamentos.RegistroDepartamento.resources
+C:\Users\INTRM29112017-i3\Downloads\Controlador-de-Asistencia-master\Controlador-de-Asistencia-master\Controlador de Asistencia\obj\Debug\Controlador_de_Asistencia.Formularios.Control_Administrativo.MenuAdministrativo.resources
+C:\Users\INTRM29112017-i3\Downloads\Controlador-de-Asistencia-master\Controlador-de-Asistencia-master\Controlador de Asistencia\obj\Debug\Controlador_de_Asistencia.Formularios.Control_Administrativo.Personal.ActualizaPersonal.resources
+C:\Users\INTRM29112017-i3\Downloads\Controlador-de-Asistencia-master\Controlador-de-Asistencia-master\Controlador de Asistencia\obj\Debug\Controlador_de_Asistencia.Formularios.Control_Administrativo.Personal.ConsultaPersonal.resources
+C:\Users\INTRM29112017-i3\Downloads\Controlador-de-Asistencia-master\Controlador-de-Asistencia-master\Controlador de Asistencia\obj\Debug\Controlador_de_Asistencia.Formularios.Control_Administrativo.Personal.RegistroPersonal.resources
+C:\Users\INTRM29112017-i3\Downloads\Controlador-de-Asistencia-master\Controlador-de-Asistencia-master\Controlador de Asistencia\obj\Debug\Controlador_de_Asistencia.Formularios.Control_Administrativo.Reportes.ReporteUnDia.resources
+C:\Users\INTRM29112017-i3\Downloads\Controlador-de-Asistencia-master\Controlador-de-Asistencia-master\Controlador de Asistencia\obj\Debug\Controlador_de_Asistencia.Formularios.Toma_de_Asistencia.Checador.resources
+C:\Users\INTRM29112017-i3\Downloads\Controlador-de-Asistencia-master\Controlador-de-Asistencia-master\Controlador de Asistencia\obj\Debug\Controlador_de_Asistencia.Splash.resources
+C:\Users\INTRM29112017-i3\Downloads\Controlador-de-Asistencia-master\Controlador-de-Asistencia-master\Controlador de Asistencia\obj\Debug\Controlador_de_Asistencia.Properties.Resources.resources
+C:\Users\INTRM29112017-i3\Downloads\Controlador-de-Asistencia-master\Controlador-de-Asistencia-master\Controlador de Asistencia\obj\Debug\Controlador de Asistencia.csproj.GenerateResource.Cache
+C:\Users\INTRM29112017-i3\Downloads\Controlador-de-Asistencia-master\Controlador-de-Asistencia-master\Controlador de Asistencia\bin\Debug\Base de Datos\SoftwareDatabase.sdf
+C:\Users\INTRM29112017-i3\Downloads\Controlador-de-Asistencia-master\Controlador-de-Asistencia-master\Controlador de Asistencia\bin\Debug\Controlador de Asistencia.exe.manifest
+C:\Users\INTRM29112017-i3\Downloads\Controlador-de-Asistencia-master\Controlador-de-Asistencia-master\Controlador de Asistencia\bin\Debug\Controlador de Asistencia.application
+C:\Users\INTRM29112017-i3\Downloads\Controlador-de-Asistencia-master\Controlador-de-Asistencia-master\Controlador de Asistencia\bin\Debug\Controlador de Asistencia.exe
+C:\Users\INTRM29112017-i3\Downloads\Controlador-de-Asistencia-master\Controlador-de-Asistencia-master\Controlador de Asistencia\bin\Debug\Controlador de Asistencia.pdb
+C:\Users\INTRM29112017-i3\Downloads\Controlador-de-Asistencia-master\Controlador-de-Asistencia-master\Controlador de Asistencia\obj\Debug\Controlador de Asistencia.TrustInfo.xml
+C:\Users\INTRM29112017-i3\Downloads\Controlador-de-Asistencia-master\Controlador-de-Asistencia-master\Controlador de Asistencia\obj\Debug\Controlador de Asistencia.exe.manifest
+C:\Users\INTRM29112017-i3\Downloads\Controlador-de-Asistencia-master\Controlador-de-Asistencia-master\Controlador de Asistencia\obj\Debug\Controlador de Asistencia.application

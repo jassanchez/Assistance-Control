@@ -32,18 +32,19 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConsultaPersonal));
             this.dataGridViewX1 = new DevComponents.DotNetBar.Controls.DataGridViewX();
+            this.softwareDatabaseDataSet = new Controlador_de_Asistencia.Base_de_Datos.SoftwareDatabaseDataSet();
+            this.personalBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.personalTableAdapter = new Controlador_de_Asistencia.Base_de_Datos.SoftwareDatabaseDataSetTableAdapters.PersonalTableAdapter();
             this.idPersonalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombresDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.apellidosDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.telefonoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.codigoAuxiliarDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.departamentoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.personalBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.softwareDatabaseDataSet = new Controlador_de_Asistencia.Base_de_Datos.SoftwareDatabaseDataSet();
-            this.personalTableAdapter = new Controlador_de_Asistencia.Base_de_Datos.SoftwareDatabaseDataSetTableAdapters.PersonalTableAdapter();
+            this.huellaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewX1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.personalBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.softwareDatabaseDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.personalBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridViewX1
@@ -64,7 +65,8 @@
             this.apellidosDataGridViewTextBoxColumn,
             this.telefonoDataGridViewTextBoxColumn,
             this.codigoAuxiliarDataGridViewTextBoxColumn,
-            this.departamentoDataGridViewTextBoxColumn});
+            this.departamentoDataGridViewTextBoxColumn,
+            this.huellaDataGridViewTextBoxColumn});
             this.dataGridViewX1.DataSource = this.personalBindingSource;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
@@ -83,13 +85,27 @@
             this.dataGridViewX1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewX1_CellContentClick);
             this.dataGridViewX1.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.dataGridViewX1_CellPainting);
             // 
+            // softwareDatabaseDataSet
+            // 
+            this.softwareDatabaseDataSet.DataSetName = "SoftwareDatabaseDataSet";
+            this.softwareDatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // personalBindingSource
+            // 
+            this.personalBindingSource.DataMember = "Personal";
+            this.personalBindingSource.DataSource = this.softwareDatabaseDataSet;
+            // 
+            // personalTableAdapter
+            // 
+            this.personalTableAdapter.ClearBeforeFill = true;
+            // 
             // idPersonalDataGridViewTextBoxColumn
             // 
             this.idPersonalDataGridViewTextBoxColumn.DataPropertyName = "idPersonal";
-            this.idPersonalDataGridViewTextBoxColumn.HeaderText = "Número Único de Registro";
+            this.idPersonalDataGridViewTextBoxColumn.HeaderText = "idPersonal";
             this.idPersonalDataGridViewTextBoxColumn.Name = "idPersonalDataGridViewTextBoxColumn";
             this.idPersonalDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idPersonalDataGridViewTextBoxColumn.Width = 114;
+            this.idPersonalDataGridViewTextBoxColumn.Width = 86;
             // 
             // nombresDataGridViewTextBoxColumn
             // 
@@ -113,7 +129,7 @@
             this.telefonoDataGridViewTextBoxColumn.HeaderText = "Telefono";
             this.telefonoDataGridViewTextBoxColumn.Name = "telefonoDataGridViewTextBoxColumn";
             this.telefonoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.telefonoDataGridViewTextBoxColumn.Width = 76;
+            this.telefonoDataGridViewTextBoxColumn.Width = 77;
             // 
             // codigoAuxiliarDataGridViewTextBoxColumn
             // 
@@ -131,19 +147,13 @@
             this.departamentoDataGridViewTextBoxColumn.ReadOnly = true;
             this.departamentoDataGridViewTextBoxColumn.Width = 106;
             // 
-            // personalBindingSource
+            // huellaDataGridViewTextBoxColumn
             // 
-            this.personalBindingSource.DataMember = "Personal";
-            this.personalBindingSource.DataSource = this.softwareDatabaseDataSet;
-            // 
-            // softwareDatabaseDataSet
-            // 
-            this.softwareDatabaseDataSet.DataSetName = "SoftwareDatabaseDataSet";
-            this.softwareDatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // personalTableAdapter
-            // 
-            this.personalTableAdapter.ClearBeforeFill = true;
+            this.huellaDataGridViewTextBoxColumn.DataPropertyName = "Huella";
+            this.huellaDataGridViewTextBoxColumn.HeaderText = "Huella";
+            this.huellaDataGridViewTextBoxColumn.Name = "huellaDataGridViewTextBoxColumn";
+            this.huellaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.huellaDataGridViewTextBoxColumn.Width = 65;
             // 
             // ConsultaPersonal
             // 
@@ -158,8 +168,8 @@
             this.Text = "Lista del personal";
             this.Load += new System.EventHandler(this.ConsultaPersonal_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewX1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.personalBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.softwareDatabaseDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.personalBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -167,15 +177,16 @@
         #endregion
 
         private System.Windows.Forms.DataGridViewTextBoxColumn idDepartamentoDataGridViewTextBoxColumn;
+        private DevComponents.DotNetBar.Controls.DataGridViewX dataGridViewX1;
         private Base_de_Datos.SoftwareDatabaseDataSet softwareDatabaseDataSet;
         private System.Windows.Forms.BindingSource personalBindingSource;
         private Base_de_Datos.SoftwareDatabaseDataSetTableAdapters.PersonalTableAdapter personalTableAdapter;
-        private DevComponents.DotNetBar.Controls.DataGridViewX dataGridViewX1;
         private System.Windows.Forms.DataGridViewTextBoxColumn idPersonalDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombresDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn apellidosDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn telefonoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn codigoAuxiliarDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn departamentoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn huellaDataGridViewTextBoxColumn;
     }
 }

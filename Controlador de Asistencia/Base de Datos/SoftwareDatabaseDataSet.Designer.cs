@@ -363,6 +363,8 @@ namespace Controlador_de_Asistencia.Base_de_Datos {
             
             private global::System.Data.DataColumn columnDepartamento;
             
+            private global::System.Data.DataColumn columnHuella;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public PersonalDataTable() {
@@ -454,6 +456,14 @@ namespace Controlador_de_Asistencia.Base_de_Datos {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn HuellaColumn {
+                get {
+                    return this.columnHuella;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -489,7 +499,7 @@ namespace Controlador_de_Asistencia.Base_de_Datos {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public PersonalRow AddPersonalRow(string Nombres, string Apellidos, byte[] Biometria, string Telefono, string CodigoAuxiliar, string Departamento) {
+            public PersonalRow AddPersonalRow(string Nombres, string Apellidos, byte[] Biometria, string Telefono, string CodigoAuxiliar, string Departamento, string Huella) {
                 PersonalRow rowPersonalRow = ((PersonalRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -498,7 +508,8 @@ namespace Controlador_de_Asistencia.Base_de_Datos {
                         Biometria,
                         Telefono,
                         CodigoAuxiliar,
-                        Departamento};
+                        Departamento,
+                        Huella};
                 rowPersonalRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowPersonalRow);
                 return rowPersonalRow;
@@ -535,6 +546,7 @@ namespace Controlador_de_Asistencia.Base_de_Datos {
                 this.columnTelefono = base.Columns["Telefono"];
                 this.columnCodigoAuxiliar = base.Columns["CodigoAuxiliar"];
                 this.columnDepartamento = base.Columns["Departamento"];
+                this.columnHuella = base.Columns["Huella"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -554,6 +566,8 @@ namespace Controlador_de_Asistencia.Base_de_Datos {
                 base.Columns.Add(this.columnCodigoAuxiliar);
                 this.columnDepartamento = new global::System.Data.DataColumn("Departamento", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDepartamento);
+                this.columnHuella = new global::System.Data.DataColumn("Huella", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnHuella);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnidPersonal}, true));
                 this.columnidPersonal.AutoIncrement = true;
@@ -568,6 +582,8 @@ namespace Controlador_de_Asistencia.Base_de_Datos {
                 this.columnCodigoAuxiliar.MaxLength = 5;
                 this.columnDepartamento.ReadOnly = true;
                 this.columnDepartamento.MaxLength = 50;
+                this.columnHuella.ReadOnly = true;
+                this.columnHuella.MaxLength = 10;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1387,6 +1403,22 @@ namespace Controlador_de_Asistencia.Base_de_Datos {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Huella {
+                get {
+                    try {
+                        return ((string)(this[this.tablePersonal.HuellaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Huella\' de la tabla \'Personal\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablePersonal.HuellaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsNombresNull() {
                 return this.IsNull(this.tablePersonal.NombresColumn);
             }
@@ -1455,6 +1487,18 @@ namespace Controlador_de_Asistencia.Base_de_Datos {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetDepartamentoNull() {
                 this[this.tablePersonal.DepartamentoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsHuellaNull() {
+                return this.IsNull(this.tablePersonal.HuellaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetHuellaNull() {
+                this[this.tablePersonal.HuellaColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -1873,6 +1917,7 @@ namespace Controlador_de_Asistencia.Base_de_Datos.SoftwareDatabaseDataSetTableAd
             tableMapping.ColumnMappings.Add("Telefono", "Telefono");
             tableMapping.ColumnMappings.Add("CodigoAuxiliar", "CodigoAuxiliar");
             tableMapping.ColumnMappings.Add("Departamento", "Departamento");
+            tableMapping.ColumnMappings.Add("Huella", "Huella");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -1886,50 +1931,56 @@ namespace Controlador_de_Asistencia.Base_de_Datos.SoftwareDatabaseDataSetTableAd
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlServerCe.SqlCeCommand[5];
+            this._commandCollection = new global::System.Data.SqlServerCe.SqlCeCommand[6];
             this._commandCollection[0] = new global::System.Data.SqlServerCe.SqlCeCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT        Personal.idPersonal, Personal.Nombres, Personal.Apellidos, Personal.Biometria, Personal.Telefono, Personal.CodigoAuxiliar, Departamentos.Nombre AS Departamento
+            this._commandCollection[0].CommandText = @"SELECT        Personal.idPersonal, Personal.Nombres, Personal.Apellidos, Personal.Biometria, Personal.Telefono, Personal.CodigoAuxiliar, Departamentos.Nombre AS Departamento, CASE WHEN Personal.Biometria IS NULL 
+                         THEN 'SIN HUELLA' ELSE 'CON HUELLA' END AS Huella
 FROM            Personal INNER JOIN
                          Departamentos ON Departamentos.idDepartamento = Personal.idDepartamento";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlServerCe.SqlCeCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT        Nombres, Apellidos, Telefono, CodigoAuxiliar, idDepartamento\r\nFROM " +
-                "           Personal\r\nWHERE        (idPersonal = @idp)";
+            this._commandCollection[1].CommandText = "DELETE Personal WHERE IDPersonal= @idPersonal";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@idp", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "idPersonal", global::System.Data.DataRowVersion.Current, null));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@idPersonal", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "idPersonal", global::System.Data.DataRowVersion.Original, null));
             this._commandCollection[2] = new global::System.Data.SqlServerCe.SqlCeCommand();
             this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = "INSERT INTO [Personal] ([Nombres], [Apellidos], [Biometria], [Telefono], [CodigoA" +
-                "uxiliar], [idDepartamento]) VALUES (@Nombres, @Apellidos, @Biometria, @Telefono," +
-                " @CodigoAuxiliar, @idDepartamento)";
+            this._commandCollection[2].CommandText = "SELECT        Nombres, Apellidos, Telefono, CodigoAuxiliar, idDepartamento\nFROM  " +
+                "          Personal\nWHERE        (idPersonal = @idp)";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@Nombres", global::System.Data.SqlDbType.NVarChar, 100, global::System.Data.ParameterDirection.Input, true, 0, 0, "Nombres", global::System.Data.DataRowVersion.Current, null));
-            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@Apellidos", global::System.Data.SqlDbType.NVarChar, 100, global::System.Data.ParameterDirection.Input, true, 0, 0, "Apellidos", global::System.Data.DataRowVersion.Current, null));
-            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@Biometria", global::System.Data.SqlDbType.VarBinary, 8000, global::System.Data.ParameterDirection.Input, true, 0, 0, "Biometria", global::System.Data.DataRowVersion.Current, null));
-            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@Telefono", global::System.Data.SqlDbType.NVarChar, 20, global::System.Data.ParameterDirection.Input, true, 0, 0, "Telefono", global::System.Data.DataRowVersion.Current, null));
-            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@CodigoAuxiliar", global::System.Data.SqlDbType.NVarChar, 5, global::System.Data.ParameterDirection.Input, true, 0, 0, "CodigoAuxiliar", global::System.Data.DataRowVersion.Current, null));
-            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@idDepartamento", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "idDepartamento", global::System.Data.DataRowVersion.Current, null));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@idp", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "idPersonal", global::System.Data.DataRowVersion.Current, null));
             this._commandCollection[3] = new global::System.Data.SqlServerCe.SqlCeCommand();
             this._commandCollection[3].Connection = this.Connection;
-            this._commandCollection[3].CommandText = "UPDATE       Personal\r\nSET                Biometria = @biometria\r\nWHERE        (i" +
-                "dPersonal = @idp)";
+            this._commandCollection[3].CommandText = "INSERT INTO [Personal] ([Nombres], [Apellidos], [Biometria], [Telefono], [CodigoA" +
+                "uxiliar], [idDepartamento]) VALUES (@Nombres, @Apellidos, @Biometria, @Telefono," +
+                " @CodigoAuxiliar, @idDepartamento)";
             this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@biometria", global::System.Data.SqlDbType.VarBinary, 8000, global::System.Data.ParameterDirection.Input, true, 0, 0, "Biometria", global::System.Data.DataRowVersion.Current, null));
-            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@idp", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "idPersonal", global::System.Data.DataRowVersion.Original, null));
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@Nombres", global::System.Data.SqlDbType.NVarChar, 100, global::System.Data.ParameterDirection.Input, true, 0, 0, "Nombres", global::System.Data.DataRowVersion.Current, null));
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@Apellidos", global::System.Data.SqlDbType.NVarChar, 100, global::System.Data.ParameterDirection.Input, true, 0, 0, "Apellidos", global::System.Data.DataRowVersion.Current, null));
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@Biometria", global::System.Data.SqlDbType.VarBinary, 8000, global::System.Data.ParameterDirection.Input, true, 0, 0, "Biometria", global::System.Data.DataRowVersion.Current, null));
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@Telefono", global::System.Data.SqlDbType.NVarChar, 20, global::System.Data.ParameterDirection.Input, true, 0, 0, "Telefono", global::System.Data.DataRowVersion.Current, null));
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@CodigoAuxiliar", global::System.Data.SqlDbType.NVarChar, 5, global::System.Data.ParameterDirection.Input, true, 0, 0, "CodigoAuxiliar", global::System.Data.DataRowVersion.Current, null));
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@idDepartamento", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "idDepartamento", global::System.Data.DataRowVersion.Current, null));
             this._commandCollection[4] = new global::System.Data.SqlServerCe.SqlCeCommand();
             this._commandCollection[4].Connection = this.Connection;
-            this._commandCollection[4].CommandText = "UPDATE       Personal\r\nSET                Nombres = @nombres, Apellidos = @apelli" +
-                "dos, Telefono = @telefono, CodigoAuxiliar = @codigoAux, idDepartamento = @iddept" +
-                "\r\nWHERE        (idPersonal = @idp)";
+            this._commandCollection[4].CommandText = "UPDATE       Personal\nSET                Biometria = @biometria\nWHERE        (idP" +
+                "ersonal = @idp)";
             this._commandCollection[4].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@nombres", global::System.Data.SqlDbType.NVarChar, 100, global::System.Data.ParameterDirection.Input, true, 0, 0, "Nombres", global::System.Data.DataRowVersion.Current, null));
-            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@apellidos", global::System.Data.SqlDbType.NVarChar, 100, global::System.Data.ParameterDirection.Input, true, 0, 0, "Apellidos", global::System.Data.DataRowVersion.Current, null));
-            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@telefono", global::System.Data.SqlDbType.NVarChar, 20, global::System.Data.ParameterDirection.Input, true, 0, 0, "Telefono", global::System.Data.DataRowVersion.Current, null));
-            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@codigoAux", global::System.Data.SqlDbType.NVarChar, 5, global::System.Data.ParameterDirection.Input, true, 0, 0, "CodigoAuxiliar", global::System.Data.DataRowVersion.Current, null));
-            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@iddept", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "idDepartamento", global::System.Data.DataRowVersion.Current, null));
+            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@biometria", global::System.Data.SqlDbType.VarBinary, 8000, global::System.Data.ParameterDirection.Input, true, 0, 0, "Biometria", global::System.Data.DataRowVersion.Current, null));
             this._commandCollection[4].Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@idp", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "idPersonal", global::System.Data.DataRowVersion.Original, null));
+            this._commandCollection[5] = new global::System.Data.SqlServerCe.SqlCeCommand();
+            this._commandCollection[5].Connection = this.Connection;
+            this._commandCollection[5].CommandText = "UPDATE       Personal\nSET                Nombres = @nombres, Apellidos = @apellid" +
+                "os, Telefono = @telefono, CodigoAuxiliar = @codigoAux, idDepartamento = @iddept\n" +
+                "WHERE        (idPersonal = @idp)";
+            this._commandCollection[5].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[5].Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@nombres", global::System.Data.SqlDbType.NVarChar, 100, global::System.Data.ParameterDirection.Input, true, 0, 0, "Nombres", global::System.Data.DataRowVersion.Current, null));
+            this._commandCollection[5].Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@apellidos", global::System.Data.SqlDbType.NVarChar, 100, global::System.Data.ParameterDirection.Input, true, 0, 0, "Apellidos", global::System.Data.DataRowVersion.Current, null));
+            this._commandCollection[5].Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@telefono", global::System.Data.SqlDbType.NVarChar, 20, global::System.Data.ParameterDirection.Input, true, 0, 0, "Telefono", global::System.Data.DataRowVersion.Current, null));
+            this._commandCollection[5].Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@codigoAux", global::System.Data.SqlDbType.NVarChar, 5, global::System.Data.ParameterDirection.Input, true, 0, 0, "CodigoAuxiliar", global::System.Data.DataRowVersion.Current, null));
+            this._commandCollection[5].Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@iddept", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "idDepartamento", global::System.Data.DataRowVersion.Current, null));
+            this._commandCollection[5].Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@idp", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "idPersonal", global::System.Data.DataRowVersion.Original, null));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1960,9 +2011,14 @@ FROM            Personal INNER JOIN
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
-        public virtual SoftwareDatabaseDataSet.PersonalDataTable GetDataPersonal(int idp) {
-            this.Adapter.SelectCommand = this.CommandCollection[1];
-            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(idp));
+        public virtual SoftwareDatabaseDataSet.PersonalDataTable GetDataPersonal(global::System.Nullable<int> idp) {
+            this.Adapter.SelectCommand = this.CommandCollection[2];
+            if ((idp.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((int)(idp.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
             SoftwareDatabaseDataSet.PersonalDataTable dataTable = new SoftwareDatabaseDataSet.PersonalDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
@@ -1971,9 +2027,33 @@ FROM            Personal INNER JOIN
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, false)]
+        public virtual int DeleteQuery(int idPersonal) {
+            global::System.Data.SqlServerCe.SqlCeCommand command = this.CommandCollection[1];
+            command.Parameters[0].Value = ((int)(idPersonal));
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, false)]
         public virtual int InsertQuery(string Nombres, string Apellidos, byte[] Biometria, string Telefono, string CodigoAuxiliar, global::System.Nullable<int> idDepartamento) {
-            global::System.Data.SqlServerCe.SqlCeCommand command = this.CommandCollection[2];
+            global::System.Data.SqlServerCe.SqlCeCommand command = this.CommandCollection[3];
             if ((Nombres == null)) {
                 command.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -2031,15 +2111,20 @@ FROM            Personal INNER JOIN
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, false)]
-        public virtual int UpdateBiometria(byte[] biometria, int idp) {
-            global::System.Data.SqlServerCe.SqlCeCommand command = this.CommandCollection[3];
+        public virtual int UpdateBiometria(byte[] biometria, global::System.Nullable<int> idp) {
+            global::System.Data.SqlServerCe.SqlCeCommand command = this.CommandCollection[4];
             if ((biometria == null)) {
                 command.Parameters[0].Value = global::System.DBNull.Value;
             }
             else {
                 command.Parameters[0].Value = ((byte[])(biometria));
             }
-            command.Parameters[1].Value = ((int)(idp));
+            if ((idp.HasValue == true)) {
+                command.Parameters[1].Value = ((int)(idp.Value));
+            }
+            else {
+                command.Parameters[1].Value = global::System.DBNull.Value;
+            }
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -2061,8 +2146,8 @@ FROM            Personal INNER JOIN
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, false)]
-        public virtual int UpdateInfo(string nombres, string apellidos, string telefono, string codigoAux, global::System.Nullable<int> iddept, int idp) {
-            global::System.Data.SqlServerCe.SqlCeCommand command = this.CommandCollection[4];
+        public virtual int UpdateInfo(string nombres, string apellidos, string telefono, string codigoAux, global::System.Nullable<int> iddept, global::System.Nullable<int> idp) {
+            global::System.Data.SqlServerCe.SqlCeCommand command = this.CommandCollection[5];
             if ((nombres == null)) {
                 command.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -2093,7 +2178,12 @@ FROM            Personal INNER JOIN
             else {
                 command.Parameters[4].Value = global::System.DBNull.Value;
             }
-            command.Parameters[5].Value = ((int)(idp));
+            if ((idp.HasValue == true)) {
+                command.Parameters[5].Value = ((int)(idp.Value));
+            }
+            else {
+                command.Parameters[5].Value = global::System.DBNull.Value;
+            }
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -2606,7 +2696,7 @@ FROM            Personal INNER JOIN
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlServerCe.SqlCeCommand[2];
+            this._commandCollection = new global::System.Data.SqlServerCe.SqlCeCommand[3];
             this._commandCollection[0] = new global::System.Data.SqlServerCe.SqlCeCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = @"SELECT        EntradaSalida.Fecha, EntradaSalida.entradaSalida, Personal.Nombres + ' ' + Personal.Apellidos AS Nombre, Departamentos.Nombre AS Departamento
@@ -2620,12 +2710,17 @@ ORDER BY EntradaSalida.Fecha";
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@fecha2", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "Fecha", global::System.Data.DataRowVersion.Current, null));
             this._commandCollection[1] = new global::System.Data.SqlServerCe.SqlCeCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "INSERT INTO [EntradaSalida] ([Fecha], [entradaSalida], [idPersonal]) VALUES (@Fec" +
-                "ha, @entradaSalida, @idPersonal)";
+            this._commandCollection[1].CommandText = "DELETE FROM EntradaSalida\r\nWHERE        (idPersonal = @IdPersonal)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@Fecha", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "Fecha", global::System.Data.DataRowVersion.Current, null));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@entradaSalida", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "entradaSalida", global::System.Data.DataRowVersion.Current, null));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@idPersonal", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "idPersonal", global::System.Data.DataRowVersion.Current, null));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@IdPersonal", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "idPersonal", global::System.Data.DataRowVersion.Original, null));
+            this._commandCollection[2] = new global::System.Data.SqlServerCe.SqlCeCommand();
+            this._commandCollection[2].Connection = this.Connection;
+            this._commandCollection[2].CommandText = "INSERT INTO [EntradaSalida] ([Fecha], [entradaSalida], [idPersonal]) VALUES (@Fec" +
+                "ha, @entradaSalida, @idPersonal)";
+            this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@Fecha", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "Fecha", global::System.Data.DataRowVersion.Current, null));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@entradaSalida", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "entradaSalida", global::System.Data.DataRowVersion.Current, null));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@idPersonal", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "idPersonal", global::System.Data.DataRowVersion.Current, null));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2679,9 +2774,38 @@ ORDER BY EntradaSalida.Fecha";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, false)]
+        public virtual int DeleteQuery(global::System.Nullable<int> IdPersonal) {
+            global::System.Data.SqlServerCe.SqlCeCommand command = this.CommandCollection[1];
+            if ((IdPersonal.HasValue == true)) {
+                command.Parameters[0].Value = ((int)(IdPersonal.Value));
+            }
+            else {
+                command.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, false)]
         public virtual int InsertQuery(global::System.Nullable<global::System.DateTime> Fecha, global::System.Nullable<bool> entradaSalida, global::System.Nullable<int> idPersonal) {
-            global::System.Data.SqlServerCe.SqlCeCommand command = this.CommandCollection[1];
+            global::System.Data.SqlServerCe.SqlCeCommand command = this.CommandCollection[2];
             if ((Fecha.HasValue == true)) {
                 command.Parameters[0].Value = ((System.DateTime)(Fecha.Value));
             }
