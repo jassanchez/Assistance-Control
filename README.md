@@ -4,4 +4,7 @@ This is a demo app for Assitant Controller checked with physical fingerprint usi
 
 ## Environment
 Framework: .NET Framework 4.8
-Componentes: DevComponente Dotnet
+
+## Librarys
+- DevComponents
+- SDK Digital Persona
